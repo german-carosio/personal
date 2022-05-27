@@ -18,20 +18,30 @@
 
         </section>
 
-
         <section>
             <% usuarios.forEach(element => { %>
 
-                <article>
-                    <h3><%= element.id %></h3>
-                    <p><%= element.nombre %> </p>
-                    <p><%= element.apellido %> </p>
-                    <p><%= element.documento %> </p>
-                    <p><%= element.fechaNacimiento %> </p>
-                    <p><%= element.telefono %> </p>
-                    <p><%= element.email %> </p>
-                    <p><%= element.password %> </p>
-            
+                <article class="usersList-article">
+
+                    <img src="/img/<%= element.img ? element.img : "usuario.png" %>" alt="">
+                    <div>
+                        <h3><%= element.id %></h3>
+                        <p><%= element.nombre %> </p>
+                        <p><%= element.apellido %> </p>
+                        <p><%= element.documento %> </p>
+                        <p><%= element.fechaNacimiento %> </p>
+                        <p><%= element.telefono %> </p>
+                        <p><%= element.email %> </p>
+                        <p><%= element.password %> </p>
+                    </div>
+
+                    <div>
+                        <a href="#">MODIFICAR</a>
+                        <form action="/adminstrador/usersList/<%= element.id %>?_method=DELETE" method="POST">
+                            <button type="submit">ELIMINAR</button>
+                        </form>
+                        
+                    </div>
                 </article>
             <% }) %>
             

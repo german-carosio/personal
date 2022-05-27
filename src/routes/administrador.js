@@ -1,20 +1,20 @@
 //llamar al router de express
 const express = require("express");
 const router = express.Router();
-
+const path = require ("path")
 //llamar a multer (procesar archivos)
 const multer = require("multer");
 
-const caragaImagen = multer.diskStorage({
-    destination:function (req, file, cb) {
-        cb(null, path.join(__dirname, "../../public/img/imgUsers"))
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, path.join(__dirname, "../../public/img"))
     },
     filename: function(req, file, cb) {
         let imagenUsuario = Date.now() + path.extname(file.originalname);
         cb(null, imagenUsuario);
     }
 })
-const upload = multer ({ caragaImagen : caragaImagen })
+const upload = multer ({ storage : storage })
 
 
 //llamar al controlador
@@ -27,10 +27,12 @@ router.get("/", AdministradorController.administrador);
 router.get("/usersList", AdministradorController.usersList);
 //crear
 router.get("/usersCreate", AdministradorController.usersCreate);
-router.post("/usersSave", upload.single("img"), AdministradorController.usersSave);
+router.post("/usersCreate", upload.single("img"), AdministradorController.usersSave);
 //Editar
 router.get("/usersEdit/:id", AdministradorController.usersEdit);
 router.put("/usersUpdate/:id", upload.single("img"), AdministradorController. usersUpdate);
 
+//eliminar
+router.delete("/usersList", upload.single("img"), AdministradorController.usersList);
 //exportar el router
 module.exports = router;

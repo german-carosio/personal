@@ -7,7 +7,7 @@ let usuarios;
 function leerJson() {
      const usersJsonRead = fs.readFileSync(path.join(__dirname, '../database/usuarios.json'),{encoding:'utf-8'})
      
-     if (usersJsonRead === "") {
+     if (usersJsonRead == "") {
      usuarios = [];
      }else {
      usuarios = JSON.parse(usersJsonRead);
@@ -44,9 +44,9 @@ let AdministradorController = {
         res.render("usersCreate");
    },
 
-   usersSave: (req,res) => {
+    usersSave: (req,res) => {
 
-    leerJson();
+        leerJson();
         
          let ultimoUser = usuarios.length -1;
          let nuevoId = usuarios[ultimoUser].id + 1;
@@ -65,7 +65,7 @@ let AdministradorController = {
         };
 
     usuarios.push(usuarioNuevo);
-
+    
     console.log(usuarios);
 
     escribirJson();

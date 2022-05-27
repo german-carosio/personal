@@ -1,0 +1,86 @@
+[
+	{
+		"id": 1,
+		"nombre": "a",
+		"apellido": "a",
+		"documento": "a",
+		"fechaNacimiento": "a",
+		"telefono": "1",
+		"email": "1",
+		"password": "1",
+		"img": "usuario.png"
+	},
+	{
+		"id": 2,
+		"nombre": "a",
+		"apellido": "a",
+		"documento": "a",
+		"fechaNacimiento": "a",
+		"telefono": "1",
+		"email": "1",
+		"password": "1",
+		"img": "usuario.png"
+	},
+	{
+		"id": 3,
+		"nombre": "a",
+		"apellido": "a",
+		"documento": "a",
+		"fechaNacimiento": "a",
+		"telefono": "1",
+		"email": "1",
+		"password": "1",
+		"img": "usuario.png"
+	},
+	{
+		"id": 4,
+		"nombre": "GERMAN ANDRES",
+		"apellido": "CAROSIO",
+		"documento": "4534534",
+		"fechaNacimiento": "2018-11-11",
+		"telefono": "2353523",
+		"email": "carosiogerman@gmail.com",
+		"password": "GSDGDSGDSG"
+	},
+	{
+		"id": 5,
+		"nombre": "GERMAN ANDRES",
+		"apellido": "CAROSIO",
+		"documento": "324523523",
+		"fechaNacimiento": "2011-11-11",
+		"telefono": "23523523",
+		"email": "carosiogerman@gmail.com",
+		"password": "352235235"
+	},
+	{
+		"id": 6,
+		"nombre": "GERMAN ANDRES",
+		"apellido": "CAROSIO",
+		"documento": "214124",
+		"fechaNacimiento": "1988-11-11",
+		"telefono": "2142141",
+		"email": "carosiogerman@gmail.com",
+		"password": "2142141241"
+	},
+	{
+		"id": 7,
+		"nombre": "GERMAN ANDRES",
+		"apellido": "CAROSIO",
+		"documento": "214124",
+		"fechaNacimiento": "1988-11-11",
+		"telefono": "21412412",
+		"email": "carosiogerman@gmail.com",
+		"password": "21421412"
+	},
+	{
+		"id": 8,
+		"nombre": "GERMAN ANDRES",
+		"apellido": "CAROSIO",
+		"documento": "2142142",
+		"fechaNacimiento": "1988-11-11",
+		"telefono": "2342141",
+		"email": "carosiogerman@gmail.com",
+		"password": "325235dretgsdg",
+		"img": "1653680326291.png"
+	}
+]
