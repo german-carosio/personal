@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!--head-->
+    <%- include ("./partials/head")  %> 
+
+<body>
+
+    <!--header-->
+    <%- include ("./partials/header")  %>
+
+    <main>
+        <section>
+            
+            <h2>lista de usuarios</h2>
+
+            <a href="/administrador/usersCreate">CREAR USUARIO</a>
+
+        </section>
+
+
+        <section>
+            <% usuarios.forEach(element => { %>
+
+                <article>
+                    <h3><%= element.id %></h3>
+                    <p><%= element.nombre %> </p>
+                    <p><%= element.apellido %> </p>
+                    <p><%= element.documento %> </p>
+                    <p><%= element.fechaNacimiento %> </p>
+                    <p><%= element.telefono %> </p>
+                    <p><%= element.email %> </p>
+                    <p><%= element.password %> </p>
+            
+                </article>
+            <% }) %>
+            
+
+        </section>
+        
+    </main>
+
+    <!--footer-->
+    <%- include ("./partials/footer")  %>
+
+</body>
+</html>

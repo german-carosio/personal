@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!--Head-->
+    <%- include ("./partials/head")  %> 
+    
+    <body>
+
+    <!--Header-->    
+    <%- include ("./partials/header")  %>
+
+    <main>
+        <section class="formulario">
+
+            <h2>Registro</h2>
+            
+            <form action="/administrador/usersCreate" method="POST" enctype="multipart/form-data">
+
+                <input type="text" name="nombre" id="nombre" required placeholder="Nombre">
+                <input type="text" name="apellido" id="apellido" required placeholder="Apellido">
+                <input type="number" name="documento" id="documento" required placeholder="Documento">
+                <input type="date" name="fechaNacimiento" id="fechaNacimiento" required>
+                <input type="number" name="telefono" id="telefono" required placeholder="Telefono">
+                <input type="email" name="email" id="email" required placeholder="Email">
+                <input type="password" name="password" id="password" required placeholder="Paswword">
+                <input type="file" name="img" id="img" required >
+                <br>
+     
+                <button class="button-register" type="submit">CREAR USUARIO</button>
+            </form>
+        </section>    
+
+    </main>
+
+    <!--Footer-->
+    <%- include ("./partials/footer")  %> 
+    
+</body>
+</html>
